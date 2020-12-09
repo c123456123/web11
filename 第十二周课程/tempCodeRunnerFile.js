@@ -1,9 +1,7 @@
-console.log((function(x){
-    console.log("this is pitaya 2")
-    x.printName= function(){
-        console.log("this is print name")
-        return 223
-    }
-    return x() + x.printName()
-})(()=>{console.log("this is arrow function");
-return 777}))
+for(var i =0;i<10;i++){
+    (function(i){
+    setTimeout(function(){
+        console.log("this is " + i)
+    },2000)
+})(i)
+}
